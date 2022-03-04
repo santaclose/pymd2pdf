@@ -1,4 +1,5 @@
 import re
+import os
 
 from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
@@ -7,9 +8,11 @@ from reportlab.rl_config import defaultPageSize
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
 
-pdfmetrics.registerFont(TTFont('firaregular', 'FiraSans/FiraSans-Regular.ttf'))
-pdfmetrics.registerFont(TTFont('firabold', 'FiraSans/FiraSans-Bold.ttf'))
-pdfmetrics.registerFont(TTFont('firacode', 'FiraCode/FiraCode-Regular.ttf'))
+moduleFolder = os.path.dirname(__file__)
+
+pdfmetrics.registerFont(TTFont('firaregular', os.path.join(moduleFolder, 'FiraSans', 'FiraSans-Regular.ttf')))
+pdfmetrics.registerFont(TTFont('firabold', os.path.join(moduleFolder, 'FiraSans', 'FiraSans-Bold.ttf')))
+pdfmetrics.registerFont(TTFont('firacode', os.path.join(moduleFolder, 'FiraCode', 'FiraCode-Regular.ttf')))
 
 PAGE_WIDTH = defaultPageSize[0]
 PAGE_HEIGHT = defaultPageSize[1]
