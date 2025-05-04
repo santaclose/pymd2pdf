@@ -1,0 +1,14 @@
+{
+	"page_width": 595.2755905511812,
+	"page_height": 841.8897637795277,
+	"x_margin": 20,
+	"y_margin": 20,
+	"column_margin": 10,
+	"column_count": 2,
+	"header_separation": 6,
+	"line_separation": 4.5,
+	"bullet_line_separation": 0,
+	"header_font_size": 17,
+	"paragraph_font_size": 9,
+	"code_font_size": 11
+}
